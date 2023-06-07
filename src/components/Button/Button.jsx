@@ -7,7 +7,7 @@ export const Button = ({ stateStatus, mashineStatus, loadingMore }) => {
       onClick={loadingMore}
       disabled={stateStatus === mashineStatus.PENDING ? true : false}
     >
-      {stateStatus === mashineStatus.PENDING ? 'Loading...' : 'Load More'}
+      {stateStatus === mashineStatus.PENDING ? 'Loading....' : 'Load More'}
     </Btn>
   );
 };
