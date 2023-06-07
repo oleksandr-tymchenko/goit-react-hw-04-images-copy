@@ -10,5 +10,5 @@ export const ErrorMessage = ({ children }) => {
   );
 };
 ErrorMessage.propTypes = {
-  children: PropTypes.string,
+  children: PropTypes.array,
 };

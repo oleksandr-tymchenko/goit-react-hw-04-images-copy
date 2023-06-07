@@ -1,13 +1,20 @@
 import PropTypes from 'prop-types';
 import { ImgGalleryItem, ImgGalleryItemImage } from './ImageGalleryItem.styled';
 
-export const ImageGaleryItem = ({ imgUrl, ImgName, imgLargeUrl }) => {
+export const ImageGaleryItem = ({
+  imgUrl,
+  ImgName,
+  imgLargeUrl,
+  openModal,
+}) => {
   return (
     <ImgGalleryItem>
       <ImgGalleryItemImage
         src={imgUrl}
-        data-large={imgLargeUrl}
         alt={ImgName}
+        onClick={() => {
+          openModal(imgLargeUrl);
+        }}
       />
     </ImgGalleryItem>
   );
