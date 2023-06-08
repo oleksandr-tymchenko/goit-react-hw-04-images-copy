@@ -1,4 +1,4 @@
-import { Component, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import Modal from 'components/Modal/Modal';
 
@@ -17,7 +17,7 @@ export const App = () => {
   const [largeImgURL, setLargeImgURL] = useState('');
   const [value, setValue] = useState('');
   const [page, setPage] = useState(1);
-  const [per_page, setPer_page] = useState(12);
+  const [per_page] = useState(12);
   const [isError, setIsError] = useState('');
   // const [showModal, setShowModal] = useState(false);
   const [showBtn, setShowBtn] = useState(false);
@@ -36,12 +36,13 @@ export const App = () => {
 
         setShowBtn(page < Math.ceil(data.total / per_page));
       })
-      .catch(error => {
+      .catch(() => {
         setIsError(true);
       })
       .finally(() => {
         setIsLoading(false);
       });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, value]);
 
   const nextPage = () => {
