@@ -19,7 +19,7 @@ export const App = () => {
   const [page, setPage] = useState(1);
   const [per_page] = useState(12);
   const [isError, setIsError] = useState('');
-  // const [showModal, setShowModal] = useState(false);
+
   const [showBtn, setShowBtn] = useState(false);
   const [isEmpty, setIsEmpty] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
